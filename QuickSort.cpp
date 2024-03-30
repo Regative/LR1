@@ -8,7 +8,7 @@ void print_arr(T* arr, int length) {
     }
     std::cout << std::endl << std::endl;
 }
-
+//Эта функция принимает массив arr и его длину length и выводит элементы массива на экран.
 template<typename T>
 int separation(T* list, int start, int end) {
     T pivot = list[end];
@@ -24,7 +24,7 @@ int separation(T* list, int start, int end) {
     std::swap(list[i + 1], list[end]);
     return i + 1;
 }
-
+//Функция separation разделяет массив на две части относительно опорного элемента
 template<typename T>
 int random_separation(T* arr, int start, int end) {
     srand(time(0));
@@ -32,7 +32,7 @@ int random_separation(T* arr, int start, int end) {
     std::swap(arr[random_index], arr[end]);
     return separation(arr, start, end);
 }
-
+//random_separation выбирает случайный элемент и передает его в функцию separation
 template<typename T>
 void quick_sort(T arr[], int start, int end) {
     if (start < end) {
@@ -44,7 +44,7 @@ void quick_sort(T arr[], int start, int end) {
         return;
     }
 }
-
+//Рекурсивная функция быстрой сортировки, которая выбирает опорный элемент, разделяет массив на две части и рекурсивно вызывает себя для каждой из этих частей.
 template<typename T>
 T* get_rand_nums(int n) {
     srand(time(0));
@@ -55,7 +55,7 @@ T* get_rand_nums(int n) {
 
     return numbers;
 }
-
+//get_rand_nums создает массив случайных чисел типа T и возвращает указатель на этот массив.
 int main()
 {
     int length = 50;
