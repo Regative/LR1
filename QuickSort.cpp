@@ -27,7 +27,6 @@ int separation(T* list, int start, int end) {
 //Функция separation разделяет массив на две части относительно опорного элемента
 template<typename T>
 int random_separation(T* arr, int start, int end) {
-    srand(time(0));
     int random_index = start + rand() % (end - start);
     std::swap(arr[random_index], arr[end]);
     return separation(arr, start, end);
@@ -47,7 +46,6 @@ void quick_sort(T arr[], int start, int end) {
 //Рекурсивная функция быстрой сортировки, которая выбирает опорный элемент, разделяет массив на две части и рекурсивно вызывает себя для каждой из этих частей.
 template<typename T>
 T* get_rand_nums(int n) {
-    srand(time(0));
     T* numbers = new T[n];
     for (int i = 0; i < n; ++i) {
         numbers[i] = rand() % 10000 + 1;
